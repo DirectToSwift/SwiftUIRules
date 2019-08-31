@@ -1,0 +1,808 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		E8A02CFA2319495800C1D879 /* SwiftUIRules-All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = E8A02CFB2319495800C1D879 /* Build configuration list for PBXAggregateTarget "SwiftUIRules-All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				E8A02CFF2319496100C1D879 /* PBXTargetDependency */,
+				E8A02D012319496100C1D879 /* PBXTargetDependency */,
+				E8A02D032319496100C1D879 /* PBXTargetDependency */,
+			);
+			name = "SwiftUIRules-All";
+			productName = "SwiftUIRules-All";
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		E84699C823194CA800794065 /* libSwiftUIRules-Mobile.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E8A02CDD231948FE00C1D879 /* libSwiftUIRules-Mobile.a */; };
+		E84699CF23194DC300794065 /* TestEnvironmentKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = E84699CE23194DC300794065 /* TestEnvironmentKeys.swift */; };
+		E87A57592319537E004EFF40 /* SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87A57582319537D004EFF40 /* SwiftUITests.swift */; };
+		E8A02CC5231948FE00C1D879 /* RuleKeyPathPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D3231933EF0055A9F9 /* RuleKeyPathPredicate.swift */; };
+		E8A02CC6231948FE00C1D879 /* RuleContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13DE231933EF0055A9F9 /* RuleContext.swift */; };
+		E8A02CC7231948FE00C1D879 /* DynamicEnvironmentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13E6231933EF0055A9F9 /* DynamicEnvironmentValues.swift */; };
+		E8A02CC8231948FE00C1D879 /* RuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D5231933EF0055A9F9 /* RuleModel.swift */; };
+		E8A02CC9231948FE00C1D879 /* RuleDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13E0231933EF0055A9F9 /* RuleDebug.swift */; };
+		E8A02CCA231948FE00C1D879 /* DynamicEnvironmentKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13E3231933EF0055A9F9 /* DynamicEnvironmentKey.swift */; };
+		E8A02CCB231948FE00C1D879 /* RuleCompoundPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D1231933EF0055A9F9 /* RuleCompoundPredicate.swift */; };
+		E8A02CCC231948FE00C1D879 /* RuleTypeIDPathAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D9231933EF0055A9F9 /* RuleTypeIDPathAssignment.swift */; };
+		E8A02CCD231948FE00C1D879 /* RuleValueAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D7231933EF0055A9F9 /* RuleValueAssignment.swift */; };
+		E8A02CCE231948FE00C1D879 /* RuleClosurePredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D0231933EF0055A9F9 /* RuleClosurePredicate.swift */; };
+		E8A02CCF231948FE00C1D879 /* RuleTypeIDAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D8231933EF0055A9F9 /* RuleTypeIDAssignment.swift */; };
+		E8A02CD0231948FE00C1D879 /* RuleCandidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13DA231933EF0055A9F9 /* RuleCandidate.swift */; };
+		E8A02CD1231948FE00C1D879 /* DefaultAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13DC231933EF0055A9F9 /* DefaultAssignment.swift */; };
+		E8A02CD2231948FE00C1D879 /* RuleAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13DD231933EF0055A9F9 /* RuleAction.swift */; };
+		E8A02CD3231948FE00C1D879 /* RulePredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D2231933EF0055A9F9 /* RulePredicate.swift */; };
+		E8A02CD4231948FE00C1D879 /* DynamicEnvironmentPathes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13E4231933EF0055A9F9 /* DynamicEnvironmentPathes.swift */; };
+		E8A02CD5231948FE00C1D879 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13E1231933EF0055A9F9 /* Rule.swift */; };
+		E8A02CD6231948FE00C1D879 /* RuleOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13E7231933EF0055A9F9 /* RuleOperators.swift */; };
+		E8A02CD7231948FE00C1D879 /* RuleBoolPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D4231933EF0055A9F9 /* RuleBoolPredicate.swift */; };
+		E8A02CD8231948FE00C1D879 /* RuleKeyAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13DB231933EF0055A9F9 /* RuleKeyAssignment.swift */; };
+		E8A02CE12319493D00C1D879 /* RuleKeyPathPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D3231933EF0055A9F9 /* RuleKeyPathPredicate.swift */; };
+		E8A02CE22319493D00C1D879 /* RuleContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13DE231933EF0055A9F9 /* RuleContext.swift */; };
+		E8A02CE32319493D00C1D879 /* DynamicEnvironmentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13E6231933EF0055A9F9 /* DynamicEnvironmentValues.swift */; };
+		E8A02CE42319493D00C1D879 /* RuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D5231933EF0055A9F9 /* RuleModel.swift */; };
+		E8A02CE52319493D00C1D879 /* RuleDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13E0231933EF0055A9F9 /* RuleDebug.swift */; };
+		E8A02CE62319493D00C1D879 /* DynamicEnvironmentKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13E3231933EF0055A9F9 /* DynamicEnvironmentKey.swift */; };
+		E8A02CE72319493D00C1D879 /* RuleCompoundPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D1231933EF0055A9F9 /* RuleCompoundPredicate.swift */; };
+		E8A02CE82319493D00C1D879 /* RuleTypeIDPathAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D9231933EF0055A9F9 /* RuleTypeIDPathAssignment.swift */; };
+		E8A02CE92319493D00C1D879 /* RuleValueAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D7231933EF0055A9F9 /* RuleValueAssignment.swift */; };
+		E8A02CEA2319493D00C1D879 /* RuleClosurePredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D0231933EF0055A9F9 /* RuleClosurePredicate.swift */; };
+		E8A02CEB2319493D00C1D879 /* RuleTypeIDAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D8231933EF0055A9F9 /* RuleTypeIDAssignment.swift */; };
+		E8A02CEC2319493D00C1D879 /* RuleCandidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13DA231933EF0055A9F9 /* RuleCandidate.swift */; };
+		E8A02CED2319493D00C1D879 /* DefaultAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13DC231933EF0055A9F9 /* DefaultAssignment.swift */; };
+		E8A02CEE2319493D00C1D879 /* RuleAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13DD231933EF0055A9F9 /* RuleAction.swift */; };
+		E8A02CEF2319493D00C1D879 /* RulePredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D2231933EF0055A9F9 /* RulePredicate.swift */; };
+		E8A02CF02319493D00C1D879 /* DynamicEnvironmentPathes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13E4231933EF0055A9F9 /* DynamicEnvironmentPathes.swift */; };
+		E8A02CF12319493D00C1D879 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13E1231933EF0055A9F9 /* Rule.swift */; };
+		E8A02CF22319493D00C1D879 /* RuleOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13E7231933EF0055A9F9 /* RuleOperators.swift */; };
+		E8A02CF32319493D00C1D879 /* RuleBoolPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D4231933EF0055A9F9 /* RuleBoolPredicate.swift */; };
+		E8A02CF42319493D00C1D879 /* RuleKeyAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13DB231933EF0055A9F9 /* RuleKeyAssignment.swift */; };
+		E8FA13E8231933EF0055A9F9 /* RuleClosurePredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D0231933EF0055A9F9 /* RuleClosurePredicate.swift */; };
+		E8FA13E9231933EF0055A9F9 /* RuleCompoundPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D1231933EF0055A9F9 /* RuleCompoundPredicate.swift */; };
+		E8FA13EA231933EF0055A9F9 /* RulePredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D2231933EF0055A9F9 /* RulePredicate.swift */; };
+		E8FA13EB231933EF0055A9F9 /* RuleKeyPathPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D3231933EF0055A9F9 /* RuleKeyPathPredicate.swift */; };
+		E8FA13EC231933EF0055A9F9 /* RuleBoolPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D4231933EF0055A9F9 /* RuleBoolPredicate.swift */; };
+		E8FA13ED231933EF0055A9F9 /* RuleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D5231933EF0055A9F9 /* RuleModel.swift */; };
+		E8FA13EE231933EF0055A9F9 /* RuleValueAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D7231933EF0055A9F9 /* RuleValueAssignment.swift */; };
+		E8FA13EF231933EF0055A9F9 /* RuleTypeIDAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D8231933EF0055A9F9 /* RuleTypeIDAssignment.swift */; };
+		E8FA13F0231933EF0055A9F9 /* RuleTypeIDPathAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D9231933EF0055A9F9 /* RuleTypeIDPathAssignment.swift */; };
+		E8FA13F1231933EF0055A9F9 /* RuleCandidate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13DA231933EF0055A9F9 /* RuleCandidate.swift */; };
+		E8FA13F2231933EF0055A9F9 /* RuleKeyAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13DB231933EF0055A9F9 /* RuleKeyAssignment.swift */; };
+		E8FA13F3231933EF0055A9F9 /* DefaultAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13DC231933EF0055A9F9 /* DefaultAssignment.swift */; };
+		E8FA13F4231933EF0055A9F9 /* RuleAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13DD231933EF0055A9F9 /* RuleAction.swift */; };
+		E8FA13F5231933EF0055A9F9 /* RuleContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13DE231933EF0055A9F9 /* RuleContext.swift */; };
+		E8FA13F6231933EF0055A9F9 /* RuleDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13E0231933EF0055A9F9 /* RuleDebug.swift */; };
+		E8FA13F7231933EF0055A9F9 /* Rule.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13E1231933EF0055A9F9 /* Rule.swift */; };
+		E8FA13F8231933EF0055A9F9 /* DynamicEnvironmentKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13E3231933EF0055A9F9 /* DynamicEnvironmentKey.swift */; };
+		E8FA13F9231933EF0055A9F9 /* DynamicEnvironmentPathes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13E4231933EF0055A9F9 /* DynamicEnvironmentPathes.swift */; };
+		E8FA13FA231933EF0055A9F9 /* DynamicEnvironmentValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13E6231933EF0055A9F9 /* DynamicEnvironmentValues.swift */; };
+		E8FA13FB231933EF0055A9F9 /* RuleOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13E7231933EF0055A9F9 /* RuleOperators.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E84699C923194CA800794065 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8FA13BF231926E50055A9F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8A02CC2231948FE00C1D879;
+			remoteInfo = "SwiftUIRules-Mobile";
+		};
+		E8A02CFE2319496100C1D879 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8FA13BF231926E50055A9F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8FA13C8231929B40055A9F9;
+			remoteInfo = "SwiftUIRules-Mac";
+		};
+		E8A02D002319496100C1D879 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8FA13BF231926E50055A9F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8A02CC2231948FE00C1D879;
+			remoteInfo = "SwiftUIRules-Mobile";
+		};
+		E8A02D022319496100C1D879 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E8FA13BF231926E50055A9F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E8A02CDE2319493D00C1D879;
+			remoteInfo = "SwiftUIRules-Watch";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E84699C323194CA800794065 /* SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E84699C723194CA800794065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Tests/SwiftUITests/Info.plist; sourceTree = "<group>"; };
+		E84699CE23194DC300794065 /* TestEnvironmentKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TestEnvironmentKeys.swift; path = Tests/SwiftUITests/TestEnvironmentKeys.swift; sourceTree = SOURCE_ROOT; };
+		E87A57582319537D004EFF40 /* SwiftUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftUITests.swift; path = Tests/SwiftUITests/SwiftUITests.swift; sourceTree = SOURCE_ROOT; };
+		E8A02CC02319442300C1D879 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E8A02CC12319446200C1D879 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E8A02CDD231948FE00C1D879 /* libSwiftUIRules-Mobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libSwiftUIRules-Mobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8A02CF92319493D00C1D879 /* libSwiftUIRules-Watch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libSwiftUIRules-Watch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8FA13C9231929B40055A9F9 /* libSwiftUIRules-Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libSwiftUIRules-Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8FA13D0231933EF0055A9F9 /* RuleClosurePredicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleClosurePredicate.swift; sourceTree = "<group>"; };
+		E8FA13D1231933EF0055A9F9 /* RuleCompoundPredicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleCompoundPredicate.swift; sourceTree = "<group>"; };
+		E8FA13D2231933EF0055A9F9 /* RulePredicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulePredicate.swift; sourceTree = "<group>"; };
+		E8FA13D3231933EF0055A9F9 /* RuleKeyPathPredicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleKeyPathPredicate.swift; sourceTree = "<group>"; };
+		E8FA13D4231933EF0055A9F9 /* RuleBoolPredicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleBoolPredicate.swift; sourceTree = "<group>"; };
+		E8FA13D5231933EF0055A9F9 /* RuleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleModel.swift; sourceTree = "<group>"; };
+		E8FA13D7231933EF0055A9F9 /* RuleValueAssignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleValueAssignment.swift; sourceTree = "<group>"; };
+		E8FA13D8231933EF0055A9F9 /* RuleTypeIDAssignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleTypeIDAssignment.swift; sourceTree = "<group>"; };
+		E8FA13D9231933EF0055A9F9 /* RuleTypeIDPathAssignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleTypeIDPathAssignment.swift; sourceTree = "<group>"; };
+		E8FA13DA231933EF0055A9F9 /* RuleCandidate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleCandidate.swift; sourceTree = "<group>"; };
+		E8FA13DB231933EF0055A9F9 /* RuleKeyAssignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleKeyAssignment.swift; sourceTree = "<group>"; };
+		E8FA13DC231933EF0055A9F9 /* DefaultAssignment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultAssignment.swift; sourceTree = "<group>"; };
+		E8FA13DD231933EF0055A9F9 /* RuleAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleAction.swift; sourceTree = "<group>"; };
+		E8FA13DE231933EF0055A9F9 /* RuleContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleContext.swift; sourceTree = "<group>"; };
+		E8FA13E0231933EF0055A9F9 /* RuleDebug.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleDebug.swift; sourceTree = "<group>"; };
+		E8FA13E1231933EF0055A9F9 /* Rule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rule.swift; sourceTree = "<group>"; };
+		E8FA13E3231933EF0055A9F9 /* DynamicEnvironmentKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicEnvironmentKey.swift; sourceTree = "<group>"; };
+		E8FA13E4231933EF0055A9F9 /* DynamicEnvironmentPathes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicEnvironmentPathes.swift; sourceTree = "<group>"; };
+		E8FA13E5231933EF0055A9F9 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E8FA13E6231933EF0055A9F9 /* DynamicEnvironmentValues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicEnvironmentValues.swift; sourceTree = "<group>"; };
+		E8FA13E7231933EF0055A9F9 /* RuleOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleOperators.swift; sourceTree = "<group>"; };
+		E8FA13FC231933F50055A9F9 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E8FA13FD231933FA0055A9F9 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		E8FA13FF2319340A0055A9F9 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E84699C023194CA800794065 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E84699C823194CA800794065 /* libSwiftUIRules-Mobile.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8A02CD9231948FE00C1D879 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8A02CF52319493D00C1D879 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8FA13C7231929B40055A9F9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E84699C423194CA800794065 /* SwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E84699CE23194DC300794065 /* TestEnvironmentKeys.swift */,
+				E87A57582319537D004EFF40 /* SwiftUITests.swift */,
+				E84699C723194CA800794065 /* Info.plist */,
+			);
+			path = SwiftUITests;
+			sourceTree = "<group>";
+		};
+		E8FA13BE231926E50055A9F9 = {
+			isa = PBXGroup;
+			children = (
+				E8FA13FC231933F50055A9F9 /* README.md */,
+				E8FA13FD231933FA0055A9F9 /* Package.swift */,
+				E8FA13CE231933EF0055A9F9 /* SwiftUIRules */,
+				E8FA13FE2319340A0055A9F9 /* xcconfig */,
+				E84699C423194CA800794065 /* SwiftUITests */,
+				E8FA13CA231929B40055A9F9 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E8FA13CA231929B40055A9F9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E8FA13C9231929B40055A9F9 /* libSwiftUIRules-Mac.a */,
+				E8A02CDD231948FE00C1D879 /* libSwiftUIRules-Mobile.a */,
+				E8A02CF92319493D00C1D879 /* libSwiftUIRules-Watch.a */,
+				E84699C323194CA800794065 /* SwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E8FA13CE231933EF0055A9F9 /* SwiftUIRules */ = {
+			isa = PBXGroup;
+			children = (
+				E8FA13DE231933EF0055A9F9 /* RuleContext.swift */,
+				E8FA13D5231933EF0055A9F9 /* RuleModel.swift */,
+				E8FA13E1231933EF0055A9F9 /* Rule.swift */,
+				E8FA13E7231933EF0055A9F9 /* RuleOperators.swift */,
+				E8FA13E2231933EF0055A9F9 /* DynamicEnvironment */,
+				E8FA13CF231933EF0055A9F9 /* Predicates */,
+				E8FA13D6231933EF0055A9F9 /* Assignments */,
+				E8FA13DF231933EF0055A9F9 /* Support */,
+			);
+			name = SwiftUIRules;
+			path = Sources/SwiftUIRules;
+			sourceTree = "<group>";
+		};
+		E8FA13CF231933EF0055A9F9 /* Predicates */ = {
+			isa = PBXGroup;
+			children = (
+				E8A02CC02319442300C1D879 /* README.md */,
+				E8FA13D2231933EF0055A9F9 /* RulePredicate.swift */,
+				E8FA13D1231933EF0055A9F9 /* RuleCompoundPredicate.swift */,
+				E8FA13D3231933EF0055A9F9 /* RuleKeyPathPredicate.swift */,
+				E8FA13D4231933EF0055A9F9 /* RuleBoolPredicate.swift */,
+				E8FA13D0231933EF0055A9F9 /* RuleClosurePredicate.swift */,
+			);
+			path = Predicates;
+			sourceTree = "<group>";
+		};
+		E8FA13D6231933EF0055A9F9 /* Assignments */ = {
+			isa = PBXGroup;
+			children = (
+				E8A02CC12319446200C1D879 /* README.md */,
+				E8FA13DA231933EF0055A9F9 /* RuleCandidate.swift */,
+				E8FA13DD231933EF0055A9F9 /* RuleAction.swift */,
+				E8FA13D8231933EF0055A9F9 /* RuleTypeIDAssignment.swift */,
+				E8FA13D9231933EF0055A9F9 /* RuleTypeIDPathAssignment.swift */,
+				E8FA13D7231933EF0055A9F9 /* RuleValueAssignment.swift */,
+				E8FA13DB231933EF0055A9F9 /* RuleKeyAssignment.swift */,
+				E8FA13DC231933EF0055A9F9 /* DefaultAssignment.swift */,
+			);
+			path = Assignments;
+			sourceTree = "<group>";
+		};
+		E8FA13DF231933EF0055A9F9 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				E8FA13E0231933EF0055A9F9 /* RuleDebug.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		E8FA13E2231933EF0055A9F9 /* DynamicEnvironment */ = {
+			isa = PBXGroup;
+			children = (
+				E8FA13E5231933EF0055A9F9 /* README.md */,
+				E8FA13E3231933EF0055A9F9 /* DynamicEnvironmentKey.swift */,
+				E8FA13E4231933EF0055A9F9 /* DynamicEnvironmentPathes.swift */,
+				E8FA13E6231933EF0055A9F9 /* DynamicEnvironmentValues.swift */,
+			);
+			path = DynamicEnvironment;
+			sourceTree = "<group>";
+		};
+		E8FA13FE2319340A0055A9F9 /* xcconfig */ = {
+			isa = PBXGroup;
+			children = (
+				E8FA13FF2319340A0055A9F9 /* Base.xcconfig */,
+			);
+			path = xcconfig;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		E8A02CC3231948FE00C1D879 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8A02CDF2319493D00C1D879 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8FA13C5231929B40055A9F9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		E84699C223194CA800794065 /* SwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E84699CD23194CA800794065 /* Build configuration list for PBXNativeTarget "SwiftUITests" */;
+			buildPhases = (
+				E84699BF23194CA800794065 /* Sources */,
+				E84699C023194CA800794065 /* Frameworks */,
+				E84699C123194CA800794065 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E84699CA23194CA800794065 /* PBXTargetDependency */,
+			);
+			name = SwiftUITests;
+			productName = SwiftUITests;
+			productReference = E84699C323194CA800794065 /* SwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		E8A02CC2231948FE00C1D879 /* SwiftUIRules-Mobile */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8A02CDA231948FE00C1D879 /* Build configuration list for PBXNativeTarget "SwiftUIRules-Mobile" */;
+			buildPhases = (
+				E8A02CC3231948FE00C1D879 /* Headers */,
+				E8A02CC4231948FE00C1D879 /* Sources */,
+				E8A02CD9231948FE00C1D879 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftUIRules-Mobile";
+			productName = SwiftUIRules;
+			productReference = E8A02CDD231948FE00C1D879 /* libSwiftUIRules-Mobile.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E8A02CDE2319493D00C1D879 /* SwiftUIRules-Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8A02CF62319493D00C1D879 /* Build configuration list for PBXNativeTarget "SwiftUIRules-Watch" */;
+			buildPhases = (
+				E8A02CDF2319493D00C1D879 /* Headers */,
+				E8A02CE02319493D00C1D879 /* Sources */,
+				E8A02CF52319493D00C1D879 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftUIRules-Watch";
+			productName = SwiftUIRules;
+			productReference = E8A02CF92319493D00C1D879 /* libSwiftUIRules-Watch.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E8FA13C8231929B40055A9F9 /* SwiftUIRules-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E8FA13CB231929B40055A9F9 /* Build configuration list for PBXNativeTarget "SwiftUIRules-Mac" */;
+			buildPhases = (
+				E8FA13C5231929B40055A9F9 /* Headers */,
+				E8FA13C6231929B40055A9F9 /* Sources */,
+				E8FA13C7231929B40055A9F9 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "SwiftUIRules-Mac";
+			productName = SwiftUIRules;
+			productReference = E8FA13C9231929B40055A9F9 /* libSwiftUIRules-Mac.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E8FA13BF231926E50055A9F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				TargetAttributes = {
+					E84699C223194CA800794065 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					E8A02CFA2319495800C1D879 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					E8FA13C8231929B40055A9F9 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = E8FA13C2231926E50055A9F9 /* Build configuration list for PBXProject "SwiftUIRules" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E8FA13BE231926E50055A9F9;
+			productRefGroup = E8FA13CA231929B40055A9F9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E8FA13C8231929B40055A9F9 /* SwiftUIRules-Mac */,
+				E8A02CC2231948FE00C1D879 /* SwiftUIRules-Mobile */,
+				E8A02CDE2319493D00C1D879 /* SwiftUIRules-Watch */,
+				E8A02CFA2319495800C1D879 /* SwiftUIRules-All */,
+				E84699C223194CA800794065 /* SwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E84699C123194CA800794065 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E84699BF23194CA800794065 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E84699CF23194DC300794065 /* TestEnvironmentKeys.swift in Sources */,
+				E87A57592319537E004EFF40 /* SwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8A02CC4231948FE00C1D879 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8A02CC5231948FE00C1D879 /* RuleKeyPathPredicate.swift in Sources */,
+				E8A02CC6231948FE00C1D879 /* RuleContext.swift in Sources */,
+				E8A02CC7231948FE00C1D879 /* DynamicEnvironmentValues.swift in Sources */,
+				E8A02CC8231948FE00C1D879 /* RuleModel.swift in Sources */,
+				E8A02CC9231948FE00C1D879 /* RuleDebug.swift in Sources */,
+				E8A02CCA231948FE00C1D879 /* DynamicEnvironmentKey.swift in Sources */,
+				E8A02CCB231948FE00C1D879 /* RuleCompoundPredicate.swift in Sources */,
+				E8A02CCC231948FE00C1D879 /* RuleTypeIDPathAssignment.swift in Sources */,
+				E8A02CCD231948FE00C1D879 /* RuleValueAssignment.swift in Sources */,
+				E8A02CCE231948FE00C1D879 /* RuleClosurePredicate.swift in Sources */,
+				E8A02CCF231948FE00C1D879 /* RuleTypeIDAssignment.swift in Sources */,
+				E8A02CD0231948FE00C1D879 /* RuleCandidate.swift in Sources */,
+				E8A02CD1231948FE00C1D879 /* DefaultAssignment.swift in Sources */,
+				E8A02CD2231948FE00C1D879 /* RuleAction.swift in Sources */,
+				E8A02CD3231948FE00C1D879 /* RulePredicate.swift in Sources */,
+				E8A02CD4231948FE00C1D879 /* DynamicEnvironmentPathes.swift in Sources */,
+				E8A02CD5231948FE00C1D879 /* Rule.swift in Sources */,
+				E8A02CD6231948FE00C1D879 /* RuleOperators.swift in Sources */,
+				E8A02CD7231948FE00C1D879 /* RuleBoolPredicate.swift in Sources */,
+				E8A02CD8231948FE00C1D879 /* RuleKeyAssignment.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8A02CE02319493D00C1D879 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8A02CE12319493D00C1D879 /* RuleKeyPathPredicate.swift in Sources */,
+				E8A02CE22319493D00C1D879 /* RuleContext.swift in Sources */,
+				E8A02CE32319493D00C1D879 /* DynamicEnvironmentValues.swift in Sources */,
+				E8A02CE42319493D00C1D879 /* RuleModel.swift in Sources */,
+				E8A02CE52319493D00C1D879 /* RuleDebug.swift in Sources */,
+				E8A02CE62319493D00C1D879 /* DynamicEnvironmentKey.swift in Sources */,
+				E8A02CE72319493D00C1D879 /* RuleCompoundPredicate.swift in Sources */,
+				E8A02CE82319493D00C1D879 /* RuleTypeIDPathAssignment.swift in Sources */,
+				E8A02CE92319493D00C1D879 /* RuleValueAssignment.swift in Sources */,
+				E8A02CEA2319493D00C1D879 /* RuleClosurePredicate.swift in Sources */,
+				E8A02CEB2319493D00C1D879 /* RuleTypeIDAssignment.swift in Sources */,
+				E8A02CEC2319493D00C1D879 /* RuleCandidate.swift in Sources */,
+				E8A02CED2319493D00C1D879 /* DefaultAssignment.swift in Sources */,
+				E8A02CEE2319493D00C1D879 /* RuleAction.swift in Sources */,
+				E8A02CEF2319493D00C1D879 /* RulePredicate.swift in Sources */,
+				E8A02CF02319493D00C1D879 /* DynamicEnvironmentPathes.swift in Sources */,
+				E8A02CF12319493D00C1D879 /* Rule.swift in Sources */,
+				E8A02CF22319493D00C1D879 /* RuleOperators.swift in Sources */,
+				E8A02CF32319493D00C1D879 /* RuleBoolPredicate.swift in Sources */,
+				E8A02CF42319493D00C1D879 /* RuleKeyAssignment.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8FA13C6231929B40055A9F9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8FA13EB231933EF0055A9F9 /* RuleKeyPathPredicate.swift in Sources */,
+				E8FA13F5231933EF0055A9F9 /* RuleContext.swift in Sources */,
+				E8FA13FA231933EF0055A9F9 /* DynamicEnvironmentValues.swift in Sources */,
+				E8FA13ED231933EF0055A9F9 /* RuleModel.swift in Sources */,
+				E8FA13F6231933EF0055A9F9 /* RuleDebug.swift in Sources */,
+				E8FA13F8231933EF0055A9F9 /* DynamicEnvironmentKey.swift in Sources */,
+				E8FA13E9231933EF0055A9F9 /* RuleCompoundPredicate.swift in Sources */,
+				E8FA13F0231933EF0055A9F9 /* RuleTypeIDPathAssignment.swift in Sources */,
+				E8FA13EE231933EF0055A9F9 /* RuleValueAssignment.swift in Sources */,
+				E8FA13E8231933EF0055A9F9 /* RuleClosurePredicate.swift in Sources */,
+				E8FA13EF231933EF0055A9F9 /* RuleTypeIDAssignment.swift in Sources */,
+				E8FA13F1231933EF0055A9F9 /* RuleCandidate.swift in Sources */,
+				E8FA13F3231933EF0055A9F9 /* DefaultAssignment.swift in Sources */,
+				E8FA13F4231933EF0055A9F9 /* RuleAction.swift in Sources */,
+				E8FA13EA231933EF0055A9F9 /* RulePredicate.swift in Sources */,
+				E8FA13F9231933EF0055A9F9 /* DynamicEnvironmentPathes.swift in Sources */,
+				E8FA13F7231933EF0055A9F9 /* Rule.swift in Sources */,
+				E8FA13FB231933EF0055A9F9 /* RuleOperators.swift in Sources */,
+				E8FA13EC231933EF0055A9F9 /* RuleBoolPredicate.swift in Sources */,
+				E8FA13F2231933EF0055A9F9 /* RuleKeyAssignment.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E84699CA23194CA800794065 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8A02CC2231948FE00C1D879 /* SwiftUIRules-Mobile */;
+			targetProxy = E84699C923194CA800794065 /* PBXContainerItemProxy */;
+		};
+		E8A02CFF2319496100C1D879 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8FA13C8231929B40055A9F9 /* SwiftUIRules-Mac */;
+			targetProxy = E8A02CFE2319496100C1D879 /* PBXContainerItemProxy */;
+		};
+		E8A02D012319496100C1D879 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8A02CC2231948FE00C1D879 /* SwiftUIRules-Mobile */;
+			targetProxy = E8A02D002319496100C1D879 /* PBXContainerItemProxy */;
+		};
+		E8A02D032319496100C1D879 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E8A02CDE2319493D00C1D879 /* SwiftUIRules-Watch */;
+			targetProxy = E8A02D022319496100C1D879 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E84699CB23194CA800794065 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = Tests/SwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = de.zeezide.swiftui.rules.SwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E84699CC23194CA800794065 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = Tests/SwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = de.zeezide.swiftui.rules.SwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E8A02CDB231948FE00C1D879 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = SwiftUIRules;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E8A02CDC231948FE00C1D879 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_NS_ASSERTIONS = NO;
+				EXECUTABLE_PREFIX = lib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_MODULE_NAME = SwiftUIRules;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		E8A02CF72319493D00C1D879 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = SwiftUIRules;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+			};
+			name = Debug;
+		};
+		E8A02CF82319493D00C1D879 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_NS_ASSERTIONS = NO;
+				EXECUTABLE_PREFIX = lib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_MODULE_NAME = SwiftUIRules;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+			};
+			name = Release;
+		};
+		E8A02CFC2319495800C1D879 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E8A02CFD2319495800C1D879 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E8FA13C3231926E50055A9F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8FA13FF2319340A0055A9F9 /* Base.xcconfig */;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Debug;
+		};
+		E8FA13C4231926E50055A9F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E8FA13FF2319340A0055A9F9 /* Base.xcconfig */;
+			buildSettings = {
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+			};
+			name = Release;
+		};
+		E8FA13CC231929B40055A9F9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_TESTABILITY = YES;
+				EXECUTABLE_PREFIX = lib;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = SwiftUIRules;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E8FA13CD231929B40055A9F9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_NS_ASSERTIONS = NO;
+				EXECUTABLE_PREFIX = lib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_MODULE_NAME = SwiftUIRules;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E84699CD23194CA800794065 /* Build configuration list for PBXNativeTarget "SwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E84699CB23194CA800794065 /* Debug */,
+				E84699CC23194CA800794065 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8A02CDA231948FE00C1D879 /* Build configuration list for PBXNativeTarget "SwiftUIRules-Mobile" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8A02CDB231948FE00C1D879 /* Debug */,
+				E8A02CDC231948FE00C1D879 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8A02CF62319493D00C1D879 /* Build configuration list for PBXNativeTarget "SwiftUIRules-Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8A02CF72319493D00C1D879 /* Debug */,
+				E8A02CF82319493D00C1D879 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8A02CFB2319495800C1D879 /* Build configuration list for PBXAggregateTarget "SwiftUIRules-All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8A02CFC2319495800C1D879 /* Debug */,
+				E8A02CFD2319495800C1D879 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8FA13C2231926E50055A9F9 /* Build configuration list for PBXProject "SwiftUIRules" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8FA13C3231926E50055A9F9 /* Debug */,
+				E8FA13C4231926E50055A9F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E8FA13CB231929B40055A9F9 /* Build configuration list for PBXNativeTarget "SwiftUIRules-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8FA13CC231929B40055A9F9 /* Debug */,
+				E8FA13CD231929B40055A9F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E8FA13BF231926E50055A9F9 /* Project object */;
+}
