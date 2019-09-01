@@ -66,6 +66,15 @@
 		E8A02CF22319493D00C1D879 /* RuleOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13E7231933EF0055A9F9 /* RuleOperators.swift */; };
 		E8A02CF32319493D00C1D879 /* RuleBoolPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D4231933EF0055A9F9 /* RuleBoolPredicate.swift */; };
 		E8A02CF42319493D00C1D879 /* RuleKeyAssignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13DB231933EF0055A9F9 /* RuleKeyAssignment.swift */; };
+		E8B6016E231C002000E31BEC /* KeyPathPredicateOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B6016D231C002000E31BEC /* KeyPathPredicateOperators.swift */; };
+		E8B6016F231C002000E31BEC /* KeyPathPredicateOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B6016D231C002000E31BEC /* KeyPathPredicateOperators.swift */; };
+		E8B60170231C002000E31BEC /* KeyPathPredicateOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B6016D231C002000E31BEC /* KeyPathPredicateOperators.swift */; };
+		E8B60173231C011000E31BEC /* CompoundPredicateOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B60172231C011000E31BEC /* CompoundPredicateOperators.swift */; };
+		E8B60174231C011000E31BEC /* CompoundPredicateOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B60172231C011000E31BEC /* CompoundPredicateOperators.swift */; };
+		E8B60175231C011000E31BEC /* CompoundPredicateOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B60172231C011000E31BEC /* CompoundPredicateOperators.swift */; };
+		E8B60177231C018D00E31BEC /* AssignmentOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B60176231C018D00E31BEC /* AssignmentOperators.swift */; };
+		E8B60178231C018D00E31BEC /* AssignmentOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B60176231C018D00E31BEC /* AssignmentOperators.swift */; };
+		E8B60179231C018D00E31BEC /* AssignmentOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B60176231C018D00E31BEC /* AssignmentOperators.swift */; };
 		E8FA13E8231933EF0055A9F9 /* RuleClosurePredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D0231933EF0055A9F9 /* RuleClosurePredicate.swift */; };
 		E8FA13E9231933EF0055A9F9 /* RuleCompoundPredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D1231933EF0055A9F9 /* RuleCompoundPredicate.swift */; };
 		E8FA13EA231933EF0055A9F9 /* RulePredicate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8FA13D2231933EF0055A9F9 /* RulePredicate.swift */; };
@@ -128,6 +137,10 @@
 		E8A02CC12319446200C1D879 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E8A02CDD231948FE00C1D879 /* libSwiftUIRules-Mobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libSwiftUIRules-Mobile.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8A02CF92319493D00C1D879 /* libSwiftUIRules-Watch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libSwiftUIRules-Watch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E8B6016D231C002000E31BEC /* KeyPathPredicateOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyPathPredicateOperators.swift; sourceTree = "<group>"; };
+		E8B60171231C003F00E31BEC /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E8B60172231C011000E31BEC /* CompoundPredicateOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundPredicateOperators.swift; sourceTree = "<group>"; };
+		E8B60176231C018D00E31BEC /* AssignmentOperators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssignmentOperators.swift; sourceTree = "<group>"; };
 		E8FA13C9231929B40055A9F9 /* libSwiftUIRules-Mac.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libSwiftUIRules-Mac.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8FA13D0231933EF0055A9F9 /* RuleClosurePredicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleClosurePredicate.swift; sourceTree = "<group>"; };
 		E8FA13D1231933EF0055A9F9 /* RuleCompoundPredicate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RuleCompoundPredicate.swift; sourceTree = "<group>"; };
@@ -198,6 +211,18 @@
 			path = SwiftUITests;
 			sourceTree = "<group>";
 		};
+		E8B6016C231C000B00E31BEC /* Operators */ = {
+			isa = PBXGroup;
+			children = (
+				E8B60171231C003F00E31BEC /* README.md */,
+				E8FA13E7231933EF0055A9F9 /* RuleOperators.swift */,
+				E8B6016D231C002000E31BEC /* KeyPathPredicateOperators.swift */,
+				E8B60172231C011000E31BEC /* CompoundPredicateOperators.swift */,
+				E8B60176231C018D00E31BEC /* AssignmentOperators.swift */,
+			);
+			path = Operators;
+			sourceTree = "<group>";
+		};
 		E8FA13BE231926E50055A9F9 = {
 			isa = PBXGroup;
 			children = (
@@ -224,10 +249,10 @@
 		E8FA13CE231933EF0055A9F9 /* SwiftUIRules */ = {
 			isa = PBXGroup;
 			children = (
+				E8B6016C231C000B00E31BEC /* Operators */,
 				E8FA13DE231933EF0055A9F9 /* RuleContext.swift */,
 				E8FA13D5231933EF0055A9F9 /* RuleModel.swift */,
 				E8FA13E1231933EF0055A9F9 /* Rule.swift */,
-				E8FA13E7231933EF0055A9F9 /* RuleOperators.swift */,
 				E8FA13E2231933EF0055A9F9 /* DynamicEnvironment */,
 				E8FA13CF231933EF0055A9F9 /* Predicates */,
 				E8FA13D6231933EF0055A9F9 /* Assignments */,
@@ -456,6 +481,7 @@
 			files = (
 				E8A02CC5231948FE00C1D879 /* RuleKeyPathPredicate.swift in Sources */,
 				E8A02CC6231948FE00C1D879 /* RuleContext.swift in Sources */,
+				E8B60178231C018D00E31BEC /* AssignmentOperators.swift in Sources */,
 				E8A02CC7231948FE00C1D879 /* DynamicEnvironmentValues.swift in Sources */,
 				E8A02CC8231948FE00C1D879 /* RuleModel.swift in Sources */,
 				E8A02CC9231948FE00C1D879 /* RuleDebug.swift in Sources */,
@@ -464,11 +490,13 @@
 				E8A02CCC231948FE00C1D879 /* RuleTypeIDPathAssignment.swift in Sources */,
 				E8A02CCD231948FE00C1D879 /* RuleValueAssignment.swift in Sources */,
 				E8A02CCE231948FE00C1D879 /* RuleClosurePredicate.swift in Sources */,
+				E8B60174231C011000E31BEC /* CompoundPredicateOperators.swift in Sources */,
 				E8A02CCF231948FE00C1D879 /* RuleTypeIDAssignment.swift in Sources */,
 				E8A02CD0231948FE00C1D879 /* RuleCandidate.swift in Sources */,
 				E8A02CD1231948FE00C1D879 /* DefaultAssignment.swift in Sources */,
 				E8A02CD2231948FE00C1D879 /* RuleAction.swift in Sources */,
 				E8A02CD3231948FE00C1D879 /* RulePredicate.swift in Sources */,
+				E8B6016F231C002000E31BEC /* KeyPathPredicateOperators.swift in Sources */,
 				E8A02CD4231948FE00C1D879 /* DynamicEnvironmentPathes.swift in Sources */,
 				E8A02CD5231948FE00C1D879 /* Rule.swift in Sources */,
 				E8A02CD6231948FE00C1D879 /* RuleOperators.swift in Sources */,
@@ -483,6 +511,7 @@
 			files = (
 				E8A02CE12319493D00C1D879 /* RuleKeyPathPredicate.swift in Sources */,
 				E8A02CE22319493D00C1D879 /* RuleContext.swift in Sources */,
+				E8B60179231C018D00E31BEC /* AssignmentOperators.swift in Sources */,
 				E8A02CE32319493D00C1D879 /* DynamicEnvironmentValues.swift in Sources */,
 				E8A02CE42319493D00C1D879 /* RuleModel.swift in Sources */,
 				E8A02CE52319493D00C1D879 /* RuleDebug.swift in Sources */,
@@ -491,11 +520,13 @@
 				E8A02CE82319493D00C1D879 /* RuleTypeIDPathAssignment.swift in Sources */,
 				E8A02CE92319493D00C1D879 /* RuleValueAssignment.swift in Sources */,
 				E8A02CEA2319493D00C1D879 /* RuleClosurePredicate.swift in Sources */,
+				E8B60175231C011000E31BEC /* CompoundPredicateOperators.swift in Sources */,
 				E8A02CEB2319493D00C1D879 /* RuleTypeIDAssignment.swift in Sources */,
 				E8A02CEC2319493D00C1D879 /* RuleCandidate.swift in Sources */,
 				E8A02CED2319493D00C1D879 /* DefaultAssignment.swift in Sources */,
 				E8A02CEE2319493D00C1D879 /* RuleAction.swift in Sources */,
 				E8A02CEF2319493D00C1D879 /* RulePredicate.swift in Sources */,
+				E8B60170231C002000E31BEC /* KeyPathPredicateOperators.swift in Sources */,
 				E8A02CF02319493D00C1D879 /* DynamicEnvironmentPathes.swift in Sources */,
 				E8A02CF12319493D00C1D879 /* Rule.swift in Sources */,
 				E8A02CF22319493D00C1D879 /* RuleOperators.swift in Sources */,
@@ -510,6 +541,7 @@
 			files = (
 				E8FA13EB231933EF0055A9F9 /* RuleKeyPathPredicate.swift in Sources */,
 				E8FA13F5231933EF0055A9F9 /* RuleContext.swift in Sources */,
+				E8B60177231C018D00E31BEC /* AssignmentOperators.swift in Sources */,
 				E8FA13FA231933EF0055A9F9 /* DynamicEnvironmentValues.swift in Sources */,
 				E8FA13ED231933EF0055A9F9 /* RuleModel.swift in Sources */,
 				E8FA13F6231933EF0055A9F9 /* RuleDebug.swift in Sources */,
@@ -518,11 +550,13 @@
 				E8FA13F0231933EF0055A9F9 /* RuleTypeIDPathAssignment.swift in Sources */,
 				E8FA13EE231933EF0055A9F9 /* RuleValueAssignment.swift in Sources */,
 				E8FA13E8231933EF0055A9F9 /* RuleClosurePredicate.swift in Sources */,
+				E8B60173231C011000E31BEC /* CompoundPredicateOperators.swift in Sources */,
 				E8FA13EF231933EF0055A9F9 /* RuleTypeIDAssignment.swift in Sources */,
 				E8FA13F1231933EF0055A9F9 /* RuleCandidate.swift in Sources */,
 				E8FA13F3231933EF0055A9F9 /* DefaultAssignment.swift in Sources */,
 				E8FA13F4231933EF0055A9F9 /* RuleAction.swift in Sources */,
 				E8FA13EA231933EF0055A9F9 /* RulePredicate.swift in Sources */,
+				E8B6016E231C002000E31BEC /* KeyPathPredicateOperators.swift in Sources */,
 				E8FA13F9231933EF0055A9F9 /* DynamicEnvironmentPathes.swift in Sources */,
 				E8FA13F7231933EF0055A9F9 /* Rule.swift in Sources */,
 				E8FA13FB231933EF0055A9F9 /* RuleOperators.swift in Sources */,
