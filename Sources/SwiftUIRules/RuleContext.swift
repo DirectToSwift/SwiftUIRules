@@ -92,8 +92,7 @@ public struct RuleContext: DynamicEnvironmentValues {
   
   public func defaultValue<K: DynamicEnvironmentKey>(for key: K.Type) -> K.Value
   {
-    if queryTypeMode { return K.defaultValue } // Avoid nested queries!
-    return K.defaultValueInContext(self)
+    return K.defaultValue
   }
 }
 
