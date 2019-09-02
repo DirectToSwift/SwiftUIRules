@@ -249,10 +249,10 @@
 		E8FA13CE231933EF0055A9F9 /* SwiftUIRules */ = {
 			isa = PBXGroup;
 			children = (
-				E8B6016C231C000B00E31BEC /* Operators */,
 				E8FA13DE231933EF0055A9F9 /* RuleContext.swift */,
 				E8FA13D5231933EF0055A9F9 /* RuleModel.swift */,
 				E8FA13E1231933EF0055A9F9 /* Rule.swift */,
+				E8B6016C231C000B00E31BEC /* Operators */,
 				E8FA13E2231933EF0055A9F9 /* DynamicEnvironment */,
 				E8FA13CF231933EF0055A9F9 /* Predicates */,
 				E8FA13D6231933EF0055A9F9 /* Assignments */,
