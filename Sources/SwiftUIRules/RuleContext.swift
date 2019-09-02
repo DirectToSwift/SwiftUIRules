@@ -182,7 +182,7 @@ public extension RuleContext {
       lastTypeQuery = storeQueryType
     }
     
-    let tempContext = RuleContext(ruleModel: RuleModel(fallbackModel: nil))
+    let tempContext = RuleContext(ruleModel: RuleModel(nil))
     _ = tempContext[keyPath: keyPath]
 
     guard let typeID = lastTypeQuery else {
