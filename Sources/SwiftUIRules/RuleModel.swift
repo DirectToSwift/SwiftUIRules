@@ -31,11 +31,8 @@ public final class RuleModel {
   public init(fallbackModel: RuleModel? = RuleModel.defaultModel) {
     self.fallbackModel = fallbackModel
   }
-  
-  // TODO: should keep a priority sorted/keyed model
-  
+    
   private var oidToRules = [ ObjectIdentifier : [ Rule ] ]()
-    // bah, fixme
   
   private var sortRequired = false
   
