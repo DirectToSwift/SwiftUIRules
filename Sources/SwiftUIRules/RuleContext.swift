@@ -92,8 +92,7 @@ public struct RuleContext: DynamicEnvironmentValues {
   
   public func defaultValue<K: DynamicEnvironmentKey>(for key: K.Type) -> K.Value
   {
-    if queryTypeMode { return K.defaultValue } // Avoid nested queries!
-    return K.defaultValueInContext(self)
+    return K.defaultValue
   }
 }
 
@@ -182,7 +181,7 @@ public extension RuleContext {
       lastTypeQuery = storeQueryType
     }
     
-    let tempContext = RuleContext(ruleModel: RuleModel(fallbackModel: nil))
+    let tempContext = RuleContext(ruleModel: RuleModel(nil))
     _ = tempContext[keyPath: keyPath]
 
     guard let typeID = lastTypeQuery else {

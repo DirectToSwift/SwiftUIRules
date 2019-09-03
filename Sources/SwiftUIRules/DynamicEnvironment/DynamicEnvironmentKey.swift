@@ -10,26 +10,5 @@ import protocol SwiftUI.EnvironmentKey
 
 /**
  * Environment keys which are dynamically evaluated against the RuleContext.
- *
- * The additional `defaultValueInContext` is essentially a replica of the
- * `DefaultAssignment` in D2W.
  */
-public protocol DynamicEnvironmentKey: EnvironmentKey {
-  
-  static func defaultValueInContext(_ context: DynamicEnvironmentValues)
-              -> Self.Value
-  
-}
-
-public extension DynamicEnvironmentKey {
-  
-  /**
-   * Default implementation just calls the `defaultValue` of the
-   * SwiftUI `EnvironmentKey`.
-   */
-  static func defaultValueInContext(_ context: DynamicEnvironmentValues)
-              -> Self.Value
-  {
-    return defaultValue
-  }
-}
+public protocol DynamicEnvironmentKey: EnvironmentKey {}

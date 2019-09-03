@@ -1,33 +1,9 @@
 //
-//  RuleOperators.swift
+//  PredicateOperators.swift
 //  SwiftUIRules
 //
-//  Created by Helge Heß on 29.08.19.
-//  Copyright © 2019 ZeeZide GmbH. All rights reserved.
+//  Created by Helge Heß on 01.09.19.
 //
-
-/**
- * A set of operators to build rule predicates, assignments and rules.
- *
- * Rule Predicate samples:
- *
- *     \.count       <  10
- *     \.person.name == "Duck"
- *
- * Rule Assignment samples:
- *
- *     \.title <= "1337"
- *     \.title <= \.defaultTitle
- *
- * Rule samples
- *
- *     \.count > 5                            => \.color <= .red
- *     \.count > 5 && \.person.name == "Duck" => \.color <= \.defaultColor
- */
-
-// Hm, operator overloading. Who doesn't love it ...
-// TBD: We could preserve the types /shrug
-
 
 // MARK: - KeyValue
 
@@ -76,6 +52,23 @@ func >= <Value>(lhs: Swift.KeyPath<RuleContext, Value>, rhs: Value)
 {
   RuleKeyPathPredicate<Value>(keyPath: lhs, operation: .greaterThanOrEqual,
                               value: rhs)
+}
+
+// e.g. \.person === manager
+public func ===<Value>(lhs: Swift.KeyPath<RuleContext, Value>, rhs: Value)
+              -> some RulePredicate where Value : AnyObject
+{
+  RuleKeyPathPredicate<Value>() { ruleContext in
+    ruleContext[keyPath: lhs] === rhs
+  }
+}
+// e.g. \.person !== manager
+public func !==<Value>(lhs: Swift.KeyPath<RuleContext, Value>, rhs: Value)
+              -> some RulePredicate where Value : AnyObject
+{
+  RuleKeyPathPredicate<Value>() { ruleContext in
+    ruleContext[keyPath: lhs] !== rhs
+  }
 }
 
 
@@ -133,56 +126,21 @@ func >= <Value>(lhs: Swift.KeyPath<RuleContext, Value>,
   RuleKeyPathPredicate<Value>(lhs, operation: .greaterThanOrEqual, rhs)
 }
 
-
-// MARK: - Compound
-
-// e.g. !predicate
-public
-prefix func !<Value: RulePredicate>(_ base: Value) -> some RulePredicate {
-  RuleNotPredicate(predicate: base)
-}
-
-// e.g. \.state == done && \.color == yellow
-public
-func &&<LHS, RHS>(lhs: LHS, rhs: RHS) -> some RulePredicate
-                  where LHS: RulePredicate, RHS: RulePredicate
+// e.g. \.person === manager
+public func ===<Value>(lhs: Swift.KeyPath<RuleContext, Value>,
+                       rhs: Swift.KeyPath<RuleContext, Value>)
+              -> some RulePredicate where Value : AnyObject
 {
-  RuleAndPredicate2(lhs, rhs)
+  RuleKeyPathPredicate<Value>() { ruleContext in
+    ruleContext[keyPath: lhs] === ruleContext[keyPath: rhs]
+  }
 }
-// e.g. \.state == done || \.color == yellow
-public
-func ||<LHS, RHS>(lhs: LHS, rhs: RHS) -> some RulePredicate
-                  where LHS: RulePredicate, RHS: RulePredicate
+// e.g. \.person !== manager
+public func !==<Value>(lhs: Swift.KeyPath<RuleContext, Value>,
+                       rhs: Swift.KeyPath<RuleContext, Value>)
+              -> some RulePredicate where Value : AnyObject
 {
-  RuleOrPredicate2(lhs, rhs)
-}
-
-
-// MARK: - Rule Assignments
-
-// \.title <= "hello"
-public
-func <= <Value>(lhs: Swift.KeyPath<RuleContext, Value>, rhs: Value)
-                -> RuleTypeIDAssignment<Value>
-{
-  RuleTypeIDAssignment(lhs, rhs)
-}
-
-// \.title <= "hello"
-public
-func <= <Value>(lhs: Swift.KeyPath<RuleContext, Value>,
-                rhs: Swift.KeyPath<RuleContext, Value>)
-                -> RuleTypeIDPathAssignment<Value>
-{
-  RuleTypeIDPathAssignment(lhs, rhs)
-}
-
-
-// MARK: - Rules
-
-infix operator => : AssignmentPrecedence
-
-// \.person.name != "Donald" => \.title <= "hello"
-public func =>(lhs: RulePredicate, rhs: RuleCandidate & RuleAction) -> Rule {
-  Rule(when: lhs, do: rhs)
+  RuleKeyPathPredicate<Value>() { ruleContext in
+    ruleContext[keyPath: lhs] !== ruleContext[keyPath: rhs]
+  }
 }

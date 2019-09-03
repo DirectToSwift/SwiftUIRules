@@ -24,10 +24,6 @@ public protocol DynamicEnvironmentValues {
 
 public extension DynamicEnvironmentValues { // lookup using type
 
-  func defaultValue<K: DynamicEnvironmentKey>(for key: K.Type) -> K.Value {
-    return K.defaultValueInContext(self)
-  }
-
   /**
    * Returns a value for the `DynamicEnvironmentKey`, or the defaultValue of
    * the key if the `resolveValueForTypeID` returns no value.

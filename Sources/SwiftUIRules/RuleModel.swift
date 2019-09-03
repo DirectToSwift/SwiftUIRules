@@ -16,26 +16,53 @@
  *       .add(\todo.status == "overdue" => \.color <= .red)
  *       .add(\todo.status == "done"    => \.color <= .gray)
  *
+ * You can also use to setup the rules:
+ *
+ *     RuleModel(
+ *       \todo.status == "pending" => \.color <= .yellow,
+ *       \todo.status == "overdue" => \.color <= .red
+ *     )
+ *
+ * Or use the literal convertible:
+ *
+ *     let ruleModel : RuleModel = [
+ *       \todo.status == "pending" => \.color <= .yellow,
+ *       \todo.status == "overdue" => \.color <= .red
+ *     ]
+ *
  * Though rules can also be constructed manually and then added using `addRule`.
  */
 public final class RuleModel {
-  
-  public static let defaultModel: RuleModel = {
-    let model = RuleModel(fallbackModel: nil)
-    // TODO: add the default rules :-)
-    return model
-  }()
-  
+   
   let fallbackModel: RuleModel? // kinda the model group?
   
-  public init(fallbackModel: RuleModel? = RuleModel.defaultModel) {
+  public init(_ fallbackModel: RuleModel? = nil, _ rules: RuleLiteral...) {
     self.fallbackModel = fallbackModel
+    for rule in rules {
+      addRule(rule.ruleLiteral)
+    }
+    if !rules.isEmpty { sortRules() }
   }
   
-  // TODO: should keep a priority sorted/keyed model
-  
+  /**
+   * Add a fallback model to the RuleModel. The rules in the fallback model
+   * will be used when none of the own rules matches (but before resorting
+   * to defaults!)
+   */
+  public func fallback(_ fallbackModel: RuleModel) -> RuleModel {
+    let newModel : RuleModel
+    if let oldFallback = self.fallbackModel { // nest fallbacks
+      newModel = RuleModel(fallbackModel.fallback(oldFallback))
+    }
+    else {
+      newModel = RuleModel(fallbackModel)
+    }
+    newModel.oidToRules   = self.oidToRules
+    newModel.sortRequired = self.sortRequired
+    return newModel
+  }
+
   private var oidToRules = [ ObjectIdentifier : [ Rule ] ]()
-    // bah, fixme
   
   private var sortRequired = false
   
@@ -96,10 +123,15 @@ extension RuleModel: CustomStringConvertible {
   }
 }
 
+
+#if false // Doesn't work w/ candidateKeyType infrastructure
+// MARK: - Using RuleModels as Rules
+
 extension RuleModel: RuleCandidate {
+  // Note: Does not work yet.
   
   public var candidateKeyType: ObjectIdentifier {
-    return ObjectIdentifier(RuleModel.self) // hack
+    return // would need to fix this.
   }
   
   public func isCandidateForKey<K: DynamicEnvironmentKey>(_ key: K.Type)
@@ -108,6 +140,7 @@ extension RuleModel: RuleCandidate {
     oidToRules[ObjectIdentifier(key)] != nil
   }
 }
+#endif
 
 
 // MARK: - Convenience adders
@@ -136,11 +169,20 @@ public extension RuleModel {
 
 // MARK: - Literals
 
+/**
+ * Literal convertible:
+ *
+ *     let ruleModel : RuleModel = [
+ *       \todo.status == "pending" => \.color <= .yellow,
+ *       \todo.status == "overdue" => \.color <= .red
+ *     ]
+ *
+ */
 extension RuleModel : ExpressibleByArrayLiteral {
   public typealias ArrayLiteralElement = RuleLiteral
   
   public convenience init(arrayLiteral rules: RuleLiteral...) {
-    self.init(fallbackModel: nil)
+    self.init(nil)
     rules.forEach { self.addRule($0.ruleLiteral) }
     sortRules()
   }

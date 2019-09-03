@@ -11,26 +11,6 @@ public struct RuleKeyPathPredicate<Value>: RulePredicate {
   // Which has to be passed in explicitly! Can't add further constraints to
   // the init, like init() where Value: Equatable
   
-  public enum ComparisonOperation {
-    case equal
-    case notEqual
-    case lessThan
-    case greaterThan
-    case lessThanOrEqual
-    case greaterThanOrEqual
-    
-    func compare<V: Comparable>(_ lhs: V, _ rhs: V) -> Bool {
-      switch self {
-        case .equal:              return lhs == rhs
-        case .notEqual:           return lhs != rhs
-        case .lessThan:           return lhs <  rhs
-        case .greaterThan:        return lhs >  rhs
-        case .lessThanOrEqual:    return lhs <= rhs
-        case .greaterThanOrEqual: return lhs >= rhs
-      }
-    }
-  }
-  
   private let predicate : ( RuleContext ) -> Bool
   #if DEBUG
     private let debugInfo : String
@@ -61,6 +41,28 @@ extension RuleKeyPathPredicate: CustomStringConvertible {
   }
 }
 
+public enum RuleComparisonOperation {
+  
+  case equal
+  case notEqual
+  case lessThan
+  case greaterThan
+  case lessThanOrEqual
+  case greaterThanOrEqual
+  
+  public func compare<V: Comparable>(_ lhs: V, _ rhs: V) -> Bool {
+    switch self {
+      case .equal:              return lhs == rhs
+      case .notEqual:           return lhs != rhs
+      case .lessThan:           return lhs <  rhs
+      case .greaterThan:        return lhs >  rhs
+      case .lessThanOrEqual:    return lhs <= rhs
+      case .greaterThanOrEqual: return lhs >= rhs
+    }
+  }
+}
+
+
 public extension RuleKeyPathPredicate {
 
   init<Value>(keyPath: Swift.KeyPath<RuleContext, Value>,
@@ -79,7 +81,7 @@ public extension RuleKeyPathPredicate {
   }
   
   init<Value>(keyPath: Swift.KeyPath<RuleContext, Value>,
-              operation: ComparisonOperation = .equal,
+              operation: RuleComparisonOperation = .equal,
               value: Value) where Value: Comparable
   {
     self.init() { ruleContext in
@@ -106,7 +108,7 @@ public extension RuleKeyPathPredicate {
   }
   
   init<Value>(_ lhs: Swift.KeyPath<RuleContext, Value>,
-              operation: ComparisonOperation = .equal,
+              operation: RuleComparisonOperation = .equal,
               _ rhs: Swift.KeyPath<RuleContext, Value>) where Value: Comparable
   {
     self.init() { ruleContext in

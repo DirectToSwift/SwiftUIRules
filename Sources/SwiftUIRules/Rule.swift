@@ -43,16 +43,16 @@
  *
  * The 'fallback' priority is most often in frameworks to specify
  * defaults for keys which can then be overridden in user provided models.
- *
  */
 public final class Rule {
   // Note: immutable class because it is passed around a bit (too lazy for 🐄)
   
-  public struct Priority: Comparable {
+  public struct Priority: Comparable, ExpressibleByIntegerLiteral {
     
     public let rawValue : Int16
-    public init(_ rawValue: Int16) { self.rawValue = rawValue }
-    
+    @inlinable public init(_ rawValue: Int16) { self.rawValue = rawValue }
+    @inlinable public init(integerLiteral value: Int16) { self.init(value) }
+
     public static let important = Priority(1000)
     public static let veryHigh  = Priority(200)
     public static let high      = Priority(150)
@@ -61,6 +61,7 @@ public final class Rule {
     public static let veryLow   = Priority(5)
     public static let fallback  = Priority(0)
     
+    @inlinable
     public static func < (lhs: Priority, rhs: Priority) -> Bool {
       return lhs.rawValue < rhs.rawValue
     }
@@ -82,7 +83,7 @@ public final class Rule {
   /**
    * Return a new rule at a different priority.
    *
-   *     (\.title <= "Hello").priority(.high)
+   *     (\.isNew == true => \.title <= "Hello").priority(.high)
    */
   public func priority(_ priority: Priority) -> Rule {
     return Rule(when: predicate, do: action, at: priority)
@@ -153,5 +154,16 @@ extension Rule.Priority {
         assertionFailure("unexpected priority: \(string)")
         return nil
     }
+  }
+}
+
+public extension RuleAction where Self : RuleCandidate {
+  /**
+   * Return a new rule wrapping the action at the specified priority:
+   *
+   *     (\.title <= "Hello").priority(.high)
+   */
+  func priority(_ priority: Rule.Priority) -> Rule {
+    return Rule(when: RuleBoolPredicate.yes, do: self, at: priority)
   }
 }
