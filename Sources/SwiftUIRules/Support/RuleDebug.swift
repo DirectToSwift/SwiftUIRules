@@ -6,11 +6,13 @@
 //  Copyright © 2019 ZeeZide GmbH. All rights reserved.
 //
 
-#if DEBUG
-  internal let debugPrints = false
-#else
-  internal let debugPrints = false
-#endif
+import class Foundation.ProcessInfo
+
+internal let debugPrints : Bool = {
+  guard let v = ProcessInfo.processInfo.environment["RULES_LOG"]?.lowercased()
+   else { return false }
+  return v.contains("debug")
+}()
 
 extension ObjectIdentifier {
   
