@@ -94,13 +94,24 @@ public final class RuleModel {
     // lookup candidates
     let rules = oidToRules[typeID] ?? []
     
-    guard let match =
-      rules.first(where: { $0.predicate.evaluate(in: context) }) else
-    {
-      return fallbackModel?.resolveValueForTypeID(typeID, in: context)
+    if debugPrints { print("RULES: lookup:", typeID.short, "in:", context) }
+    
+    for rule in rules {
+      if rule.predicate.evaluate(in: context) {
+        if debugPrints { print("RULES:   match:", rule) }
+        return rule.fireInContext(context)
+      }
+      else {
+        if debugPrints { print("RULES:   no-match:", rule) }
+      }
     }
     
-    return match.fireInContext(context)
+    if let fallbackModel = fallbackModel {
+      if debugPrints { print("RULES: test fallback:", typeID.short) }
+      return fallbackModel.resolveValueForTypeID(typeID, in: context)
+    }
+    if debugPrints { print("RULES: non-matched:", typeID.short) }
+    return nil
   }
   
 }
