@@ -94,7 +94,7 @@ public final class RuleModel {
     // lookup candidates
     let rules = oidToRules[typeID] ?? []
     
-    if debugPrints { print("RULES: lookup:", typeID.short, "in:", context) }
+    if debugPrints { print("RULES: lookup:", typeID.short) }
     
     for rule in rules {
       if rule.predicate.evaluate(in: context) {
