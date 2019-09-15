@@ -38,9 +38,7 @@ public final class RuleModel {
   
   public init(_ fallbackModel: RuleModel? = nil, _ rules: RuleLiteral...) {
     self.fallbackModel = fallbackModel
-    for rule in rules {
-      addRule(rule.ruleLiteral)
-    }
+    rules.forEach { $0.addToRuleModel(self) }
     if !rules.isEmpty { sortRules() }
   }
   
@@ -94,7 +92,7 @@ public final class RuleModel {
     // lookup candidates
     let rules = oidToRules[typeID] ?? []
     
-    if debugPrints { print("RULES: lookup:", typeID.short, "in:", context) }
+    if debugPrints { print("RULES: lookup:", typeID.short) }
     
     for rule in rules {
       if rule.predicate.evaluate(in: context) {
@@ -194,20 +192,30 @@ extension RuleModel : ExpressibleByArrayLiteral {
   
   public convenience init(arrayLiteral rules: RuleLiteral...) {
     self.init(nil)
-    rules.forEach { self.addRule($0.ruleLiteral) }
+    rules.forEach { $0.addToRuleModel(self) }
     sortRules()
   }
 }
 public protocol RuleLiteral {
-  var ruleLiteral: Rule { get }
+  func addToRuleModel(_ model: RuleModel)
 }
 extension Rule: RuleLiteral {
-  public var ruleLiteral: Rule { self }
+  public func addToRuleModel(_ model: RuleModel) {
+    model.addRule(self)
+  }
 }
 extension RuleAction where Self: RuleCandidate {
-  public var ruleLiteral: Rule {
-    Rule(when: RuleBoolPredicate.yes, do: self)
+  public func addToRuleModel(_ model: RuleModel) {
+    model.addRule(Rule(when: RuleBoolPredicate.yes, do: self))
   }
 }
 extension RuleTypeIDAssignment     : RuleLiteral {}
 extension RuleTypeIDPathAssignment : RuleLiteral {}
+
+extension RuleModel: RuleLiteral {
+  public func addToRuleModel(_ model: RuleModel) {
+    for rules in oidToRules.values {
+      rules.forEach { model.addRule($0) }
+    }
+  }
+}
