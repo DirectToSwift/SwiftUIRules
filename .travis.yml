@@ -20,3 +20,5 @@ script:
     - export PATH="$HOME/usr/bin:$PATH"
     - swift build -c release
     - swift build -c debug
+    - xcodebuild -scheme SwiftUIRules-All -configuration Debug -target SwiftUIRules-All
+    - xcodebuild -scheme SwiftUIRules-All -configuration Release -target SwiftUIRules-All
