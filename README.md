@@ -31,8 +31,8 @@ project,
 or you can use Swift Package Manager.
 
 The package URL is:
-[https://github.com/AlwaysRightInstitute/SwiftUIRules.git
-](https://github.com/AlwaysRightInstitute/SwiftUIRules.git).
+[https://github.com/DirectToSwiftUI/SwiftUIRules.git
+](https://github.com/DirectToSwiftUI/SwiftUIRules.git).
 
 ## Using SwiftUI Rules
 
@@ -46,7 +46,7 @@ Let's say we want to add an own
 environment key called `fancyColor`.
 
 First thing we need is an 
-[`DynamicEnvironmentKey`](https://github.com/AlwaysRightInstitute/SwiftUIRules/blob/develop/Sources/SwiftUIRules/DynamicEnvironment/DynamicEnvironmentKey.swift#L17) 
+[`DynamicEnvironmentKey`](https://github.com/DirectToSwiftUI/SwiftUIRules/blob/develop/Sources/SwiftUIRules/DynamicEnvironment/DynamicEnvironmentKey.swift#L17) 
 declaration:
 ```swift
 struct FancyColorEnvironmentKey: DynamicEnvironmentKey {
@@ -60,7 +60,7 @@ That value is used when the environment key is queried,
 but no value has been explicitly set by the user.
 
 Second we need to declare a property on the
-[DynamicEnvironmentPathes](https://github.com/AlwaysRightInstitute/SwiftUIRules/blob/develop/Sources/SwiftUIRules/DynamicEnvironment/DynamicEnvironmentPathes.swift#L19)
+[DynamicEnvironmentPathes](https://github.com/DirectToSwiftUI/SwiftUIRules/blob/develop/Sources/SwiftUIRules/DynamicEnvironment/DynamicEnvironmentPathes.swift#L19)
 struct:
 ```swift
 extension DynamicEnvironmentPathes {
